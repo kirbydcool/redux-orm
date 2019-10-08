@@ -1,5 +1,5 @@
 {
-  "name": "redux-orm",
+  "name": "@thanx/redux-orm",
   "version": "0.14.1",
   "description": "Simple ORM to manage and query your state trees",
   "main": "lib/index.js",
@@ -18,7 +18,7 @@
     "build:docs": "jsdoc src -d docs -r -c ./jsdoc.conf.json --verbose",
     "build:api-docs": "gulp api-docs",
     "build": "npm run clean && npm run transpile:cjs && npm run transpile:es && npm run build:umd && npm run build:umd:min && npm run build:docs",
-    "pub": "npm run ensure-clean-tree && npm run ensure-version-not-published && npm run lint && npm run test && npm run build && npm run test:es5 && npm publish && git push origin && npm run clean",
+    "pub": "npm run ensure-version-not-published && npm run lint && npm run test && npm run build && npm run test:es5 && npm publish && git push origin && npm run clean",
     "pub:next": "npm run ensure-clean-tree && npm run ensure-version-not-published && npm run lint && npm run test && npm run build && npm run test:es5 && npm publish --tag next && git push origin && npm run clean",
     "ensure-version-not-published": "[ -z \"$(npm info $(npm list | head -n 1 | cut -d ' ' -f1) 2> /dev/null)\" ] || (echo \"Error: $(npm list | head -n 1 | cut -d ' ' -f1) has already been published.\" && false)",
     "ensure-clean-tree": "[ -z \"$(git status -s)\" ] || (echo \"Error: There are uncommitted changes in the git repostory.\" && false)",
@@ -32,7 +32,7 @@
   "author": "Tommi Kaikkonen <tommi.kaikkonen@aalto.fi>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/redux-orm/redux-orm.git"
+    "url": "https://github.com/kirbydcool/redux-orm.git"
   },
   "license": "MIT",
   "devDependencies": {
